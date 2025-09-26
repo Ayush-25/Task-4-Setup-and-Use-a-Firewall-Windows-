@@ -12,11 +12,13 @@ Configure and test basic firewall rules to allow or block traffic. This task hel
 ## Methodology and Steps
 
 **Step 1:** Opened Windows Defender Firewall with Advanced Security and verified inbound rules.
+
 *Screenshot:*
 <img width="1297" height="635" alt="Screenshot 2025-09-26 151633" src="https://github.com/user-attachments/assets/f6b94445-c9fb-4d3c-94e2-ecf2377e15ce" />
 
 
 **Step 2:** Listed current firewall rules:
+
 *Screenshot:*
 <img width="1296" height="496" alt="Screenshot 2025-09-26 151701" src="https://github.com/user-attachments/assets/07ddbe8d-2be6-431f-9655-45d0039b30b5" />
 
@@ -24,6 +26,7 @@ Configure and test basic firewall rules to allow or block traffic. This task hel
 **Step 3:** Added rule to block inbound traffic on TCP port 23 (Telnet).  
 GUI Steps: Inbound Rules → New Rule → Port → TCP → Specific Local Port: 23 → Next → Block the connection → Next → Apply to Domain, Private, Public → Next → Name: `Block_Telnet` → Finish  
 PowerShell Alternative:
+
 *Screenshot:*
 <img width="1296" height="413" alt="Screenshot 2025-09-26 152115" src="https://github.com/user-attachments/assets/fb2223be-5bed-4ace-8954-a4d50d69e1a7" />
 
@@ -31,6 +34,7 @@ PowerShell Alternative:
 **Step 4:** Tested the rule:  
 Installed Telnet client if needed:  
 Telnet connection failed, confirming firewall block.  
+
 *Screenshot:*  
 <img width="935" height="448" alt="Screenshot 2025-09-26 152537" src="https://github.com/user-attachments/assets/10715224-b48e-42a2-b35a-2e0961be9fa1" />
 
@@ -38,6 +42,7 @@ Telnet connection failed, confirming firewall block.
 **Step 5:** Added rule to allow SSH (TCP port 22).  
 GUI Steps: Inbound Rules → New Rule → Port → TCP → Specific Local Port: 22 → Next → Allow the connection → Next → Apply to Domain, Private, Public → Next → Name: `Allow_SSH` → Finish  
 PowerShell Alternative:
+
 *Screenshot:*  
 <img width="891" height="311" alt="Screenshot 2025-09-26 153025" src="https://github.com/user-attachments/assets/0d1eeb6b-1e8b-4dd7-a59d-abec5d2c89eb" />
 
@@ -45,6 +50,7 @@ PowerShell Alternative:
 **Step 6:** Removed test block rule to restore original state.  
 GUI Steps: Right-click `Block_Telnet` → Delete  
 PowerShell Alternative:
+
 *Screenshot:*  
 <img width="889" height="406" alt="Screenshot 2025-09-26 153240" src="https://github.com/user-attachments/assets/2cb65f41-70c5-4f78-b029-9790c9cd0593" />
 
